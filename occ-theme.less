@@ -1,0 +1,64 @@
+@import '../src/less/uikit.theme.less';
+
+@global-color: #444444;
+@global-font-family: LatoWeb, 'Lato Extended', Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@global-primary-background: #003767;
+@global-secondary-background: #ebd9ad;
+@global-muted-color: #666666;
+@global-muted-background: #e7f2f9;
+@global-link-color: #003767;
+@global-danger-background: #b5121b;
+@alert-danger-background: lighten(tint(@global-danger-background, 50%), 27%);
+@global-success-background: #1f815d;
+@alert-success-background: lighten(tint(@global-success-background, 60%), 25%);
+@global-warning-background: #664d03;
+@alert-warning-background: lighten(@global-warning-background, 70%);
+@card-secondary-color-mode: dark;
+.uk-card-secondary.uk-card-body:extend(.uk-dark all) when (@card-secondary-color-mode = dark) {
+    color: #444;
+}
+
+.uk-accordion-title {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+.uk-accordion li {
+    border-bottom: 1px solid lighten(@global-muted-color, 40%);
+    padding-bottom: 1.25rem;
+}
+
+.uk-border {
+    border: @global-border-width solid @global-border;
+}
+
+.uk-container-prose {
+    max-width: 80ch;
+    font-size: 1rem;
+}
+@media screen and (min-width: @breakpoint-small) {
+    .uk-container-prose {
+        max-width: 75ch;
+        font-size: 1.1rem;
+    }
+    .uk-accordion-title {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (min-width: @breakpoint-medium) {
+    .uk-container-prose {
+        max-width: 70ch;
+        font-size: 1.2rem;
+    }
+    .uk-accordion-title {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: @breakpoint-large) {
+    .uk-container-prose {
+        max-width: 65ch;
+        font-size: 1.3rem;
+    }
+    .uk-accordion-title {
+        font-size: 1.6rem;
+    }
+}
