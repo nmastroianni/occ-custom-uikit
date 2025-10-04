@@ -8,14 +8,33 @@
 @global-muted-background: #e7f2f9;
 @global-link-color: #003767;
 @global-danger-background: #b5121b;
+@alert-primary-background:                              @global-primary-background;
+@alert-primary-color:                           @global-inverse-color;
 @alert-danger-background: lighten(tint(@global-danger-background, 50%), 27%);
 @global-success-background: #1f815d;
 @alert-success-background: lighten(tint(@global-success-background, 60%), 25%);
 @global-warning-background: #664d03;
 @alert-warning-background: lighten(@global-warning-background, 70%);
 @card-secondary-color-mode: dark;
+@base-link-text-decoration:                     underline;
+@button-secondary-color:                        @global-color;
+@card-secondary-color:                         @global-color;
+
+
+.uk-background-primary { 
+    color: @global-inverse-color;
+}
+
 .uk-card-secondary.uk-card-body:extend(.uk-dark all) when (@card-secondary-color-mode = dark) {
     color: #444;
+}
+
+.uk-card-primary .uk-nav li:not(.uk-active) > a, .uk-card-primary .uk-nav .uk-nav-sub li:not(.uk-active) > a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.uk-card-secondary .uk-nav li:not(.uk-active) > a, .uk-card-secondary .uk-nav .uk-nav-sub li:not(.uk-active) > a {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .uk-accordion-title {
